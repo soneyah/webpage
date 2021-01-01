@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>yellowLADDER</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!----------------------CSS-------------------------------------------------------------->
+    <style>
+    .header{
+    background-image: url("images/back.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: auto;
+    }
+    .header  h1{
+    font-weight:bold;
+    font-family: 'Caveat', cursive;
+    font-size:70px;
+    text-align: left;
+    }
+    .header h4{
+    font-weight:bold;
+    font-family: 'Caveat', cursive;
+    font-size:30px;
+    padding-left: 1em;
+    text-align: left;
+    }
+    .socialbar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    }
+    .socialbar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+    }
+    .socialbar a:hover {
+    background-color: #000;
+    }
+    .facebook {
+    background: #3B5998;
+    color: white;
+    }
+    .twitter {
+    background: #55ACEE;
+    color: white;
+    }
+    .google {
+    background: #dd4b39;
+    color: white;
+    }
+    .linkedin {
+    background: #007bb5;
+    color: white;
+    }
+    .youtube {
+    background: #bb0000;
+    color: white;
+    }
+    .content {
+    margin-left: 75px;
+    font-size: 30px;
+    }
+    
+    @media (max-width: 576px) {
+    .xs {color:red;font-weight:bold;}
+    }
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) and (max-width:768px) {
+    .sm {color:red;font-weight:bold;}
+    }
+    
+    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+    @media (min-width: 768px) and (max-width:992px) {
+    .md {color:red;font-weight:bold;}
+    }
+    
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) and (max-width:1200px) {
+    .lg {color:red;font-weight:bold;}
+    }
+    
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+    .xl {color:red;font-weight:bold;}
+    }
+    @media screen and (max-width: 500px) {
+    .header {
+    float: none;
+    display: block;
+    text-align: left;
+    }
+    .header  h1{
+    font-weight:bold;
+    font-family: 'Caveat', cursive;
+    font-size:25px;
+    }
+    .header h4{
+    font-weight:bold;
+    font-family: 'Caveat', cursive;
+    font-size:18px;
+    padding-left: 1em;
+    text-align: left;
+    }
+    }
+    @media screen and (max-width: 991px) {
+     /* start of large tablet styles */
+     .img-responsive {
+       min-width: 70%;
+     }
+}
+
+@media screen and (max-width: 767px) {
+     /* start of medium tablet styles */
+     /* Adding a fixed/percentage min-width could ensure that the image doesn't get too small */
+     .img-responsive {
+       min-width: 30%;
+     }
+}
+
+@media screen and (max-width: 479px) {
+     /* start of phone styles */
+     /* It's possible to hide the image if the screen becomes too small */
+     .img-responsive {
+       min-width: 10%;
+     }
+}
+    </style>
+  </head>
+  <!--------------------------------------NAVBAR----------------------------------------->
+  <body style="height:1500px">
+    <nav class="navbar navbar-inverse navbar-expand-sm navbar-expand-md navbar-expand-lg bg-dark navbar-dark navbar-fixed-top" id="myTopnav">
+      <a class="navbar-brand" href="#"> <img src="images/ladd.png" alt="logo" style="width:35px;"></a>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          
+          <a class="navbar-brand" href="#" style="color: yellow;">yellowLADDER</a>
+        </div>
+        <!--<p class="navbar-text">WELCOME</p>
+      </div>-->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">SERVICES</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">PORTFOLIO <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+      <form class="navbar-form navbar-left" action="/action_page.php">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search" name="search">
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </nav>-->
+  <!------------------------------------------------------------------------------------->
+  <!----------------------------------HOME-------------------------------------------------------------------------------->
+  
+  <!-- <div class="header" style="padding: 20em 10em;">
+    <!--<div class="container"style="font-weight:bold;
+      font-family: 'Caveat', cursive; text-align: left;">  -->
+      <!--<p><h1>yellowLADDER</h1></p>
+      <p><h4>BUILDERS</h4></p>
+      <p><h5>"The .container-fluid class provides a full width container, spanning the entire ."</h5></p> </div>
+    </div> -->
+    <div class="header" style="padding: 15em 5em;">
+      <div class="row">
+        <h1>yellowLADDER</h1>
+      </div>
+      <div class="row">
+        <h4>BUILDERS</h4>
+      </div>
+      <div class="row">
+        <h5>"The .container-fluid class provides a full width container, spanning the entire ."</h5>
+      </div>
+    </div>
+    <!------------------------------------ABOUT---------------------------------------------------------------------------->
+    <div class="jumbotron"  style="background-color: black; ">
+      <div class="container text-center" style="font-family: 'Caveat', cursive; color: yellow;">
+        <h1><b>ABOUT US</b></h1>
+        <hr style="width:50%;text-align:center;border-width:.5em;">
+        <hr style="width:40%;text-align:center;">
+        <p>Some text that represents "Me"... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        </p>
+      </div>
+    </div>
+    <section class="about" style="background-color: grey; margin-top: -3em; padding-top: 1em;">
+      <div class="container" style="background-color:black; padding-bottom: 1em;padding-top:1em;">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+          <!--<div class="row>
+            --> <div class="col-md-4">
+              <div class="card"  style=" padding:2em;background-color: grey; ">
+                <img src="images/dup.jpg" class="card-img-top img-responsive" alt="...">
+                <div class="card-body">
+                  <h2 class="card-title"><b>SHILPA REDDY</b></h2>
+                  <p class="card-text"><h4>FOUNDER</h4></p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card" style=" padding: 2em; background-color: grey; " >
+                <img src="images/dup.jpg" class="card-img-top img-responsive"  alt="...">
+                <div class="card-body">
+                  <h2 class="card-title"><b>KARAN JOHAR</b></h2><!--300X300-->
+                  <p class="card-text"><h4>CEO</h4></p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card" style="padding:2em;background-color: grey; ">
+                <img src="images/dup.jpg" class="card-img-top img-responsive "  alt="...">
+                <div class="card-body">
+                  <h2 class="card-title"><b>ARIJIT SINGH</b></h2>
+                  <p class="card-text"><h4>HR MANAGER</h4></p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+    </section>
+    <!------------------------------SEVICES--------------------------------------------------------------------------->
+    <div class="jumbotron"  style="background-color: black; ">
+      <div class="container text-center"  style="font-family: 'Caveat', cursive; color: yellow;" id="services">
+        <h1><b>OUR SERVICES</b></h1>
+        <hr style="width:50%;text-align:center;border-width:.5em;">
+        <hr  style="width:40%;text-align:center;">
+        <p>Some text that represents "Me"... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        </p>
+      </div>
+    </div>
+    <section class="services" style=" background-color:grey; margin-top: -3em;color: grey;padding:1em; padding-bottom: 2em;" >
+      <div class="container" style="padding-bottom:3em;margin-top:2em; background-color: black;">
+        <h1> JOIN US!</h1>
+        <div id="myCarousel"class="carousel slide"   data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="images/slide1.jpg" alt="Los Angeles" style="width:100% height:100px;">
+              <div class="carousel-caption">
+                <h3>Los Angeles</h3>
+                <p>LA is always so much fun!</p>
+              </div>
+            </div>
+            <div class="item ">
+              <img src="images/slide2.jpg" alt="Chicago"  style="width:100% height:100px;">
+              <div class="carousel-caption">
+                <h3>Chicago</h3>
+                <p>Thank you, Chicago!</p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="images/slide3.jpg" alt="New York" style="width:100 height:100px;">
+              <div class="carousel-caption">
+                <h3>New York</h3>
+                <p>We love the Big Apple!</p>
+              </div>
+            </div>
+            
+          </div>
+          <!-- Left and right controls -->
+          <a class="left carousel-control" style="background-color:  grey;" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!----------------------------PORTFOLIO-------------------------------------------------------------------------------->
+    <div class="jumbotron"  style="background-color: black;">
+      <div class="container text-center" style="font-family: 'Caveat', cursive; color: yellow;">
+        <h1><b>OUR PORTFOLIO</b></h1>
+        <hr style="width:50%;text-align:center;border-width:.5em;">
+        <hr  style="width:40%;text-align:center;">
+        <p>Some text that represents "Me"...</p>
+      </div>
+    </div>
+    <!--<section class="portfolio" style="background-color: grey;padding-top:3em;margin-top:-3em;">
+      <div class="container-fluid bg-3 text-center" style="color: yellow; font-family: 'dancing script', cursive; background-color: black;padding-bottom: 2rem; ">
+        <h3><b>SOME OF OUR WORKS</b>></h3><br>
+        <div class="row"  style="padding-right: 2em; padding-left: 2em;">
+          <div class="col-sm-3">
+            <p>ABCD</p>
+            <img src="images/work1.jpg" class="img-responsive" style="width:100%" alt="Image">
+          </div>
+          <div class="col-sm-3">
+            <p>EFGH</p>
+            <img src="images/work2.jpg" class="img-responsive" style="width:100%" alt="Image">
+          </div>
+          <div class="col-sm-3">
+            <p>IJKL</p>
+            <img src="images/work3.jpg" class="img-responsive" style="width:100%" alt="Image">
+          </div>
+          <div class="col-sm-3">
+            <p>MNOP</p>
+            <img src="images/work4.jpg" class="img-responsive" style="width:100%" alt="Image">
+          </div>
+        </div>
+      </div><br>
+      <div class="container-fluid bg-3 text-center"  style="color:yellow;  background-color: black; padding-bottom: 2rem;">
+        <div class="row"  style="padding-right: 2em; padding-left: 2em;">
+          <div class="col-sm-3">
+            <p>QRST</p>
+            <img src="images/work5.jpg" class="img-responsive" style="width:100%" alt="Image">
+          </div>
+          <div class="col-sm-3">
+            <p>UVWX</p>
+            <img src="images/work6.jpg" class="img-responsive" style="width:100%" alt="Image">
+          </div>
+          <div class="col-sm-3">
+            <p>YZAB</p>
+            <img src="images/work7.jpg" class="img-responsive" style="width:100%" alt="Image">
+          </div>
+          <div class="col-sm-3">
+            <p>CDEF</p>
+            <img src="images/work8.jpg" class="img-responsive" style="width:100%" alt="Image">
+          </div>
+        </div>
+      </div><br><br>-->
+<section class="portfolio" style="background-color:grey;margin-top:-3em;margin-bottom: -.01em;">
+      <div class="container"  >
+        <div class="card" style="width:auto;background-color:black;">
+        <div class="row ">
+          <div class="col-sm-4" style=" font-family: 'Caveat', cursive;color:white; padding-left: 2em;" >
+              <div class="card-body-left">
+                <h3 class="card-title">Lorem ip</h3>
+                <p class="card-text">
+                  <h5>consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex 
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  
+                </h5></p></div>
+              </div>
+          <div class="col-sm-8">
+          <img src="images/6.jpg" class= "img-responsive" alt="Card image"/></div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-------------------------------------FOOTER-------------------------------------------------------->
+    <!-- Footer -->
+    <footer class="page-footer font-small mdb-color darken-3 pt-4" style="background-color: black;">
+      <!-- Footer Elements --->
+      <div class="container">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center"style="padding: 2em;">
+          <!--Grid column-->
+          <div class="col-md-6">
+            <!-- Video -->
+            <div class="embed-responsive embed-responsive-16by9 mb-4" >
+              <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vlDzYIIOYmM"
+              allowfullscreen></iframe>-->
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/2fhZDac8rkA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="footertext" style="text-align: right; font-family: 'Caveat', cursive; padding-top: 50px; color: yellow; padding-right: 1rem;">
+          <h1>STAY CONNECTED!</h1></div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Footer Elements -->
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3" style="background-color: yellow;padding: 1em;">© 2020 Copyright:
+        <a href="https://XXXXXX.com/"> xxxxx.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!----------------------------------SOCIALBAR--------------------------------------------------------------->
+    <div class="socialbar">
+      <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+      <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+      <a href="#" class="google"><i class="fa fa-google"></i></a>
+      <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+      <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+    </div>
+    <!-----------------------------------END----------------------------------------------------->
+  </body>
+</html>
